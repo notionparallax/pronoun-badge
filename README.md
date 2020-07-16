@@ -15,7 +15,7 @@ Base URL is `https://pronoun.cyou/x/y?` and then there are params:
 - `posessive=His` Anything
 - `posessive-pronoun=His` Anything
 - `reflexive=Himself` Anything
-- `emoji=👫` Anything, but probably emoji, any number
+- `emoji=👫` Anything, but probably emoji, any number.\*
 - `colour=B00B55` A hex colour
 - `height=30` result height in px
 - `sep=|` a separator character
@@ -39,3 +39,7 @@ I took the [names for the params from here](https://uwm.edu/lgbtrc/support/gende
 ![](https://uwm.edu/lgbtrc/wp-content/uploads/sites/162/2016/04/Pronoun-cards-2016-01-768x439.png)
 
 This is a subject that I don't really know a lot about, so if you have any input, I'd really appreciate it. Submit a PR or email me (ben at notionparallax.co.uk)
+
+\* The skin colour thing in the emojis is cool, but it does seem a bit specific. maybe someone could make a skin colour emoji that worked like party parrot, but for all the possible skin tones?
+
+![](https://cultofthepartyparrot.com/parrots/hd/parrot.gif)
