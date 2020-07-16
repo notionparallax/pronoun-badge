@@ -13,8 +13,12 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
   const SVG = require("svg.js")(window);
   const document = window.document;
 
-  let q = request.query;
   //example URL: http://localhost:5001/pronoun-badge/us-central1/helloWorld?subject=He&object=Him&posessive=His&posessive-pronoun=His&reflexive=Himself&emoji=%F0%9F%91%AB&colour=B00B5&height=20px
+  let q = request.query;
+  q.height = q.height || 20;
+  if (q.flag) {
+    flagPath = getFlagPath(q.flag);
+  }
 
   const text = makeText(q);
   const margin = 2;
@@ -34,12 +38,53 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
   visibleText.x(rect.width() / 2);
   visibleText.y(-2);
 
+  if (q.flag) {
+    let flag = canvas.image(flagPath);
+    flag.height(q.height - margin);
+    flag.width(q.height * 1.77);
+    flag.x(rect.width() - flag.width());
+    flag.y(margin / 2);
+  }
+
   canvas.size(rect.width(), q.height);
 
   response.status(200);
   response.type("svg");
   response.send(canvas.svg());
 });
+
+function getFlagPath(flagName) {
+  const flagFiles = {
+    "7899": "7899.jpg",
+    agender: "Agender.jpg",
+    aromantic: "Aromantic.jpg",
+    asexual: "Asexual.jpg",
+    baker: "Baker.jpg",
+    bear: "Bear.png",
+    bisexual: "Bisexual.jpg",
+    genderfluid: "Genderfluid.jpg",
+    genderqueer: "Genderqueer.jpg",
+    intersex: "Intersex.png",
+    labrys: "Labrys.jpg",
+    leather: "Leather.png",
+    lipstick: "Lipstick.jpg",
+    nonbinary: "NonBinary.jpg",
+    pansexual: "Pansexual.jpg",
+    philadelphia: "Philadelphia.jpg",
+    polyamory: "Polyamory.png",
+    polysexual: "Polysexual.png",
+    pony: "Pony.jpg",
+    progress: "Progress.jpg",
+    rubber: "Rubber.png",
+    straightally: "StraightAlly.jpg",
+    traditional: "Traditional.jpg",
+    transgender: "Transgender.jpg",
+  };
+  return `https://raw.githubusercontent.com/notionparallax/pronoun-badge/master/flags/${
+    flagFiles[flagName.toLowerCase()]
+  }`;
+}
+
 function makeText(q) {
   // builds the text in an ordered way, protexts against unordered inputs
   //   http://localhost:5001/pronoun-badge/us-central1/helloWorld?
@@ -59,6 +104,6 @@ function makeText(q) {
   if (q.posessivePronoun) parts.push(q.posessivePronoun);
   if (q.reflexive) parts.push(q.reflexive);
   if (q.emoji) parts.push(q.emoji);
-  let text = parts.join(q.sep || "/");
-  return text;
+
+  return parts.join(q.sep || "/");
 }
