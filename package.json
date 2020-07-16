@@ -1,0 +1,19 @@
+{
+  "name": "pronoun",
+  "version": "1.0.0",
+  "description": "a tiny badge to show your pronouns",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ben Doherty",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^5.16.0",
+    "jsdom": "^16.3.0",
+    "save": "^2.4.0",
+    "simple-svg-tools": "^1.1.12",
+    "svg.js": "^2.7.1",
+    "svgdom": "^0.1.8"
+  }
+}
