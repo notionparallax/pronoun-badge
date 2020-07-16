@@ -8,6 +8,8 @@ Here's a few examples
 
 ![](https://pronoun.cyou/x/y?subject=She&object=Her&posessive=Hers&posessive-pronoun=Hers&reflexive=Herself&emoji=👫👩🏼‍🤝‍👩🏻&colour=05968c&height=30&sep=⋆)
 
+![](https://pronoun.cyou/x/y?subject=Per&object=Per&posessive=Pers&posessive-pronoun=Pers&reflexive=Perself&emoji=🖖&colour=677d01&height=26&sep=%20-%20)
+
 ![](https://pronoun.cyou/x/y?subject=She&object=Her&posessive=Hers&height=20)
 
 And you can also use it inline: Ben ![](https://pronoun.cyou/x/y?subject=He&object=Him&height=20)
