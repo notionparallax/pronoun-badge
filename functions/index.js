@@ -1,9 +1,11 @@
 const functions = require("firebase-functions");
+// const axios = require("axios");
+// const sharp = require("sharp");
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
-exports.helloWorld = functions.https.onRequest((request, response) => {
+exports.helloWorld = functions.https.onRequest(async (request, response) => {
   functions.logger.info(JSON.stringify(request.query), {
     structuredData: true,
   });
@@ -39,6 +41,18 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
   visibleText.y(-2);
 
   if (q.flag) {
+    // let image = await axios.get(flagPath, {
+    //   responseType: "arraybuffer",
+    // });
+    // const big = sharp(image.data);
+    // smol = big.resize(
+    //   Math.ceil(q.height - margin),
+    //   Math.ceil((q.height - margin) * 1.774)
+    // );
+    // const buf = await smol.toBuffer();
+    // const b64 = buf.toString("base64");
+    // let returnedB64 = Buffer.from(image.data).toString("base64");
+    // let flag = canvas.image(b64);
     let flag = canvas.image(flagPath);
     flag.height(q.height - margin);
     flag.width(q.height * 1.77);
@@ -80,9 +94,10 @@ function getFlagPath(flagName) {
     traditional: "Traditional.jpg",
     transgender: "Transgender.jpg",
   };
-  return `https://raw.githubusercontent.com/notionparallax/pronoun-badge/master/flags/${
-    flagFiles[flagName.toLowerCase()]
-  }`;
+  //   return `https://raw.githubusercontent.com/notionparallax/pronoun-badge/master/flags/${
+  // flagFiles[flagName.toLowerCase()]
+  //   }`;
+  return `../flags/${flagFiles[flagName.toLowerCase()]}`;
 }
 
 function makeText(q) {
