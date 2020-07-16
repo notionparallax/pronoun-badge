@@ -6,7 +6,7 @@ Here's a few examples
 
 ![](https://pronoun.cyou/x/y?subject=He&object=Him&posessive=His&posessive-pronoun=His&reflexive=Himself&emoji=👫&colour=B00B55&height=30&sep=|)
 
-![](https://pronoun.cyou/x/y?subject=She&object=Her&posessive=Hers&posessive-pronoun=Hers&reflexive=Herself&emoji=👫👩🏼‍🤝‍👩🏻&colour=05968c&height=30&sep=⨝)
+![](https://pronoun.cyou/x/y?subject=She&object=Her&posessive=Hers&posessive-pronoun=Hers&reflexive=Herself&emoji=👫👩🏼‍🤝‍👩🏻&colour=05968c&height=30&sep=⋆)
 
 ![](https://pronoun.cyou/x/y?subject=She&object=Her&posessive=Hers&height=20)
 
@@ -57,7 +57,9 @@ There is an extra param that you can use to add a flag. It doesn't work fully ye
 I got the flags from [this article: The Complete Guide to Queer Pride Flags](https://www.pride.com/pride/2018/6/13/complete-guide-queer-pride-flags-0)
 
 <style>
+
 li img {height:1rem;}
+
 </style>
 
 - 1978-1999 Pride Flag `flag=7899` ![](https://raw.githubusercontent.com/notionparallax/pronoun-badge/master/flags/7899.jpg)
