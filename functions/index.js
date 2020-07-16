@@ -36,6 +36,8 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
 
   canvas.size(rect.width(), q.height);
 
+  response.status(200);
+  response.type("svg");
   response.send(canvas.svg());
 });
 function makeText(q) {
