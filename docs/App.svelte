@@ -27,9 +27,10 @@
     if (posessive) parts.push(posessive);
     if (posessivePronoun) parts.push(posessivePronoun);
     if (reflexive) parts.push(reflexive);
-    if (emoji) parts.push(emoji);
-
-    return parts.join(sep || "/");
+    // if (emoji) parts.push(emoji); // this seems to break sapper
+    let text = parts.join(sep || "|");
+    text = "!!!";
+    return text;
   }
   function buildURL() {
     let parts = [];
@@ -47,45 +48,76 @@
   }
 </script>
 
-<h1>
-  <code>{buildURL()}</code>
+<style>
+  p.note {
+    width: 30em;
+    float: right;
+    margin: 0;
+  }
+</style>
+
+<svelte:head>
+  <title>Sapper project template</title>
+</svelte:head>
+
+<p><code>{buildURL()}</code><br /></p>
+<figure>
   <img alt="A pronoun badge that reads {makeText()}" src={buildURL()} />
-</h1>
+  <figcaption>This is the generated badge at that URL</figcaption>
+</figure>
 
-<div>
-  <label for="subject">subject</label>
-  <input name="subject" bind:value={subject} />
-  <p>subject=He Anything</p>
+<form>
+  <div>
+    <label for="subject">subject</label>
+    <input name="subject" bind:value={subject} />
+    <p class="note">subject=He Anything</p>
+  </div>
 
-  <label for="object">object</label>
-  <input name="object" bind:value={object} />
-  <p>object=Him Anything</p>
+  <div>
+    <label for="object">object</label>
+    <input name="object" bind:value={object} />
+    <p class="note">object=Him Anything</p>
+  </div>
 
-  <label for="posessive">posessive</label>
-  <input name="posessive" bind:value={posessive} />
-  <p>posessive=His Anything</p>
+  <div>
+    <label for="posessive">posessive</label>
+    <input name="posessive" bind:value={posessive} />
+    <p class="note">posessive=His Anything</p>
+  </div>
 
-  <label for="posessive-pronoun">posessive pronoun</label>
-  <input name="posessive-pronoun" bind:value={posessivePronoun} />
-  <p>posessive-pronoun=His Anything</p>
+  <div>
+    <label for="posessive-pronoun">posessive pronoun</label>
+    <input name="posessive-pronoun" bind:value={posessivePronoun} />
+    <p class="note">posessive-pronoun=His Anything</p>
+  </div>
 
-  <label for="reflexive">reflexive</label>
-  <input name="reflexive" bind:value={reflexive} />
-  <p>reflexive=Himself Anything</p>
+  <div>
+    <label for="reflexive">reflexive</label>
+    <input name="reflexive" bind:value={reflexive} />
+    <p class="note">reflexive=Himself Anything</p>
+  </div>
 
-  <label for="emoji">emoji</label>
-  <input name="emoji" bind:value={emoji} />
-  <p>emoji=👫 Anything, but probably emoji, any number.*</p>
+  <div>
+    <label for="emoji">emoji</label>
+    <input name="emoji" bind:value={emoji} />
+    <p class="note">emoji=👫 Anything, but probably emoji, any number.*</p>
+  </div>
 
-  <label for="colour">colour</label>
-  <input name="colour" bind:value={colour} />
-  <p>colour=B00B55 A hex colour</p>
+  <div>
+    <label for="colour">colour</label>
+    <input name="colour" bind:value={colour} />
+    <p class="note">colour=B00B55 A hex colour</p>
+  </div>
 
-  <label for="height">height</label>
-  <input name="height" bind:value={height} />
-  <p>height=30 result height in px</p>
+  <div>
+    <label for="height">height</label>
+    <input name="height" bind:value={height} />
+    <p class="note">height=30 result height in px</p>
+  </div>
 
-  <label for="sep">sep</label>
-  <input name="sep" bind:value={sep} />
-  <p>sep=| a separator character</p>
-</div>
+  <div>
+    <label for="sep">sep</label>
+    <input name="sep" bind:value={sep} />
+    <p class="note">sep=| a separator character</p>
+  </div>
+</form>
