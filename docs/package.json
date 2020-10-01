@@ -1,0 +1,22 @@
+{
+  "name": "pronoun-badge",
+  "version": "1.0.0",
+  "description": "A way to make a pronoun badge for your repo",
+  "main": "index.html",
+  "browserslist": [
+    "last 1 chrome versions"
+  ],
+  "scripts": {
+    "dev": "parcel ./index.html --port 1234",
+    "build": "parcel build src/index.html"
+  },
+  "author": "Ben Doherty",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-svelte": "^4.0.6",
+    "sass": "^1.26.11",
+    "svelte": "^3.28.0"
+  }
+}
