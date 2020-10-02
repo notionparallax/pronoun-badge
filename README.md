@@ -30,7 +30,7 @@ All are optional, not all have defaults yet, and there are more to come at some 
 
 So, the simplest badge would be:
 
-`https://pronoun.cyou/x/y?subject=She&object=Her&height=25`
+`https://pronoun.cyou/x/y?subject=She&object=Her`
 
 ![](https://pronoun.cyou/x/y?subject=She&object=Her)
 
