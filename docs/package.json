@@ -12,7 +12,9 @@
   },
   "author": "Ben Doherty",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "svelte-color-picker": "^1.0.7"
+  },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-svelte": "^4.0.6",
