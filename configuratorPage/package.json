@@ -7,8 +7,8 @@
     "last 1 chrome versions"
   ],
   "scripts": {
-    "dev": "parcel ./index.html --port 1234",
-    "build": "parcel build ./index.html"
+    "dev": "parcel ./index.html --port 1234 --out-dir --out-dir C:/Users/ben/Documents/BD/pronoun/docs",
+    "build": "parcel build ./index.html --out-dir C:/Users/ben/Documents/BD/pronoun/docs --no-content-hash --no-minify"
   },
   "author": "Ben Doherty",
   "license": "ISC",

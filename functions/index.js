@@ -1,6 +1,5 @@
 const functions = require("firebase-functions");
-// const axios = require("axios");
-// const sharp = require("sharp");
+const fs = require("fs");
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
@@ -41,18 +40,6 @@ exports.helloWorld = functions.https.onRequest(async (request, response) => {
   visibleText.y(-2);
 
   if (q.flag) {
-    // let image = await axios.get(flagPath, {
-    //   responseType: "arraybuffer",
-    // });
-    // const big = sharp(image.data);
-    // smol = big.resize(
-    //   Math.ceil(q.height - margin),
-    //   Math.ceil((q.height - margin) * 1.774)
-    // );
-    // const buf = await smol.toBuffer();
-    // const b64 = buf.toString("base64");
-    // let returnedB64 = Buffer.from(image.data).toString("base64");
-    // let flag = canvas.image(b64);
     let flag = canvas.image(flagPath);
     flag.height(q.height - margin);
     flag.width(q.height * 1.77);
@@ -63,8 +50,17 @@ exports.helloWorld = functions.https.onRequest(async (request, response) => {
   canvas.size(rect.width(), q.height);
 
   response.status(200);
+  // if (q.format === "png") {
+  //   fs.writeFileSync("temp.svg", canvas.svg());
+  //   const sharp = require("sharp");
+  //   const sharp_png = sharp("temp.svg").png();
+  //   const buf = await sharp_png.toBuffer();
+  //   response.type("png");
+  //   response.send(buf);
+  // } else {
   response.type("svg");
   response.send(canvas.svg());
+  // }
 });
 
 function getFlagPath(flagName) {
