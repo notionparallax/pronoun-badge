@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "dev": "parcel ./index.html --port 1234",
-    "build": "parcel build src/index.html"
+    "build": "parcel build ./index.html"
   },
   "author": "Ben Doherty",
   "license": "ISC",
