@@ -28,7 +28,11 @@
     if (person.height) parts.push(`height=${person.height}&`);
     if (person.sep) parts.push(`sep=${person.sep}&`);
     if (person.note) parts.push(`sep=${person.note}&`);
-    return "https://pronoun.cyou/x/y?" + parts.join("");
+    url = "https://pronoun.cyou/x/y?" + parts.join("");
+    if (url.slice(-1) == "&") {
+      url = url.slice(0, -1);
+    }
+    return url;
   }
 
   function makeText() {
