@@ -52,7 +52,7 @@ This is a subject that I don't really know a lot about, so if you have any input
 
 There is an extra param that you can use to add a flag. It doesn't work fully yet, but you can think of it as a preview feature.
 
-![](https://pronoun.cyou/x/y?subject=She&object=Her&posessive=Hers&posessive-pronoun=Hers&reflexive=Herself&emoji=👩🏾‍🤝‍👩🏽✊&colour=B00B55&height=30&sep=%20|%20&flag=straightally)
+![](https://pronoun.cyou/x/y?subject=She&object=Her&posessive=Hers&posessive-pronoun=Hers&reflexive=Herself&emoji=👩🏾‍🤝‍👩🏽✊&colour=B00B55&height=30&sep=%20|%20&flag=nonbinary)
 
 I got the flags from [this article: The Complete Guide to Queer Pride Flags](https://www.pride.com/pride/2018/6/13/complete-guide-queer-pride-flags-0)
 
