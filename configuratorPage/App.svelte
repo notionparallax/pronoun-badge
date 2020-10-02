@@ -164,37 +164,37 @@
 </figure>
 
 <form>
-  <div>
+  <div class="input-group">
     <label for="subject">subject</label>
     <input name="subject" bind:value={person.subject} />
     <p class="note">subject={person.subject} Anything</p>
   </div>
 
-  <div>
+  <div class="input-group">
     <label for="object">object</label>
     <input name="object" bind:value={person.object} />
     <p class="note">object={person.object} Anything</p>
   </div>
 
-  <div>
+  <div class="input-group">
     <label for="posessive">posessive</label>
     <input name="posessive" bind:value={person.posessive} />
     <p class="note">posessive={person.posessive} Anything</p>
   </div>
 
-  <div>
+  <div class="input-group">
     <label for="posessive-pronoun">posessive pronoun</label>
     <input name="posessive-pronoun" bind:value={person.posessivePronoun} />
     <p class="note">posessive-pronoun={person.posessivePronoun} Anything</p>
   </div>
 
-  <div>
+  <div class="input-group">
     <label for="reflexive">reflexive</label>
     <input name="reflexive" bind:value={person.reflexive} />
     <p class="note">reflexive={person.reflexive} Anything</p>
   </div>
 
-  <div>
+  <div class="input-group">
     <label for="emoji">emoji</label>
     <input name="emoji" bind:value={person.emoji} />
     <p class="note">
@@ -203,26 +203,26 @@
     </p>
   </div>
 
-  <div>
+  <div class="input-group">
     <label for="colour">colour</label>
     <input name="colour" bind:value={person.colour} type="color" />
     <p class="note">colour={person.colour} A hex colour</p>
   </div>
 
-  <div>
+  <div class="input-group">
     <label for="height">height</label>
     <input name="height" bind:value={person.height} />
     <p class="note">height={person.height} result height in px</p>
   </div>
 
-  <div>
+  <div class="input-group">
     <label for="sep">sep</label>
     <input name="sep" bind:value={person.sep} />
     <p class="note">sep={person.sep} a separator character</p>
   </div>
 
   <!-- TODO: waiting for the server to accept it -->
-  <!-- <div>
+  <!-- <div class="input-group">
     <label for="note">note</label>
     <input name="note" bind:value={person.note} />
     <p class="note">
