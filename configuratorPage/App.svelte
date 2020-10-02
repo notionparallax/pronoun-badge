@@ -156,7 +156,7 @@
 
 <!-- <p>alt text: {altText}</p> -->
 
-<p><a href={url} target="_blank"><code>{url}</code></a></p>
+<div class="the-url"><a href={url} target="_blank"><code>{@html url.replace("&","<wbr>&")}</code></a></div>
 
 <figure>
   <img alt="A pronoun badge that reads {altText}" src={url} />
