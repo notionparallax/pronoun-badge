@@ -106,22 +106,40 @@
 </script>
 
 <style>
+  .the-url {
+    width: 90vw;
+    margin: auto;
+    overflow: hidden;
+  }
+  img {
+    max-width: 80vw;
+  }
   p.note {
-    width: 30vw;
+    width: 40vw;
     display: inline-block;
     margin: 0;
+    min-width: 15em;
+  }
+  .input-group {
+    border: 1px solid orange;
+    border-radius: 1em;
   }
   input {
     width: 30vw;
   }
   label {
     min-width: 10em;
-    width: 20vw;
+    width: 15vw;
     display: inline-block;
     text-align: right;
   }
   code {
-    font-size: 200%;
+    font-size: 140%;
+  }
+  @media (min-width: 30em) {
+    code {
+      font-size: 200%;
+    }
   }
 
   .photos {
