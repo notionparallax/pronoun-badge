@@ -2,6 +2,8 @@
 
 An embeddable badge for your profiles to show your pronouns. Works anywhere that you can url link an image. Inspired by the new GitHub profile repo, particularly [8bithemant](https://github.com/8bithemant/8bithemant)'s. He has a pronoun badge, but it's a one off; this is generalised.
 
+[There is a half finished configurator page here](https://notionparallax.github.io/pronoun-badge/)
+
 Here's a few examples
 
 ![](https://pronoun.cyou/x/y?subject=He&object=Him&posessive=His&posessive-pronoun=His&reflexive=Himself&emoji=👫&colour=B00B55&height=30&sep=|)
