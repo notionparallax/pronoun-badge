@@ -11,6 +11,6 @@
   "dependencies": {
     "save": "^2.4.0",
     "svg.js": "^2.7.1",
-    "svgdom": "^0.1.8"
+    "svgdom": "^0.1.10"
   }
 }
